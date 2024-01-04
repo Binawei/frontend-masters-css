@@ -37,6 +37,12 @@ body {
   border: 2px solid var(--color);
   border-radius: 0.25rem;
   outline: none;
+  //my code
+  transition-property: border-colour;
+  transition-duration:0.3s;
+  //test first then move to the button
+    
+  
 }
 
 .ui-button {
@@ -48,6 +54,21 @@ body {
   border-radius: 0.25rem;
   height: var(--input-height);
   background-color: var(--color);
+  //my code
+  transition-property: background-color, opacity, transform;
+  transition-duration:0.3s;
+  //test it first
+  transition-delay: 0.5s;
+  //after active
+  transition-timing-function: linear, linear, ease-in-out;
+  cursor:pointer;
+
+  &:hover{
+    opacity: 0.5;
+    transform: translateY(10%); //test and move it to active
+    //the add this
+    transform:scale(1.1);
+  }
 }
 
 [data-show]:not([data-active]) {
